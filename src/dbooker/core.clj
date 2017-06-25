@@ -42,7 +42,7 @@
 
 
 ;; generating the calendar sequence (30 events, each sorted for start time < end time)
-(def calendar (map sort (partition 2 (take 30 (repeatedly #(rand-int 12)))))) 
+(def calendar (map sort (partition 2 (take 30 (repeatedly #(rand-int 24)))))) 
 
 ;; casting to sets because the sequence order in two cases is not guaranteed
 (= (set (overlapping-1 calendar)) (set (overlapping-2 calendar)))

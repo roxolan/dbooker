@@ -7,7 +7,7 @@ Given a sequence of events, each having a start and end time, write a program th
 
 ## Solution
 
-The data structure of the calendar is presumed to be a sequence of vectors holding integers < 12
+The data structure of the calendar is presumed to be a sequence of vectors holding integers < 24
 denoting starting and ending time of the event (starting time always being smaller than ending).
 
 The first version of solution doesn't use external dependencies, the second requires clojure.math.combinatorics.
