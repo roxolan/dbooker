@@ -1,17 +1,6 @@
-;; The data structure of the calendar is presumed to be a sequence of vectors holding integers < 12
-;; denoting starting and ending time of the event (starting time always being smaller than ending)
-;; The first version of solution doesn't use external dependencies, the second requires clojure.math.combinatorics
-;; Leiningen project structure is necessary in order to enable the second option.
-
 (ns dbooker.core
   (:require [clojure.pprint :as pp]
             [clojure.math.combinatorics :as combo]))
-
-
-(defn pair-events
-  "Creates pairs of events from two lists"
-  [l1 l2]
-  (map vector l1 l2))
 
 (defn events-overlap? [pair]
   (let [[start1 end1] (first pair)
